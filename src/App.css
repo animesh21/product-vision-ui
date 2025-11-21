@@ -1,0 +1,273 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  height: 56px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.status {
+  font-size: 14px;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #16a34a;
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  padding: 16px 24px 24px;
+}
+
+.panel {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upload-box {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  background: #ffffff;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.upload-placeholder {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.upload-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.prompt-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prompt-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.prompt-input {
+  min-height: 100px;
+  resize: vertical;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.prompt-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb20;
+}
+
+.prompt-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preset-buttons button {
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  background: #f9fafb;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.primary-btn {
+  margin-top: 4px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error-text {
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.empty-state {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.description-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.description-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.description-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.description-text {
+  font-size: 14px;
+  margin: 4px 0 8px;
+  color: #111827;
+}
+
+.description-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.description-footer button {
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #f9fafb;
+}
+
+.footer {
+  height: 40px;
+  font-size: 12px;
+  color: #9ca3af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.model-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.model-selector label {
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.model-selector select {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  outline: none;
+}
+
+.model-selector select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb40;
+}
